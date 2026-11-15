@@ -1,5 +1,5 @@
 
-import { useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { HeartPulse, LogOut, Pill, CalendarDays, Bell } from 'lucide-react'
 import { useAuth } from '../context/AuthContext'
 
@@ -46,6 +46,13 @@ export default function Dashboard() {
         <p className="mt-2 text-slate-600">
           Your CareCircle dashboard is ready.
         </p>
+<Link
+  to="/medications"
+  className="mt-5 inline-flex items-center gap-2 rounded-xl bg-teal-600 px-5 py-3 font-semibold text-white hover:bg-teal-700"
+>
+  <Pill size={19} />
+  Manage medications
+</Link>
 
         <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {[
