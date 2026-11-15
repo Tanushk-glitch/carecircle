@@ -8,6 +8,7 @@ import Profile from './pages/Profile'
 import ProtectedRoute from './components/ProtectedRoute'
 import Medications from './pages/Medications'
 import Appointments from './pages/Appointments'
+import CareConnections from './pages/CareConnection'
 
 export default function App() {
   return (
@@ -21,6 +22,7 @@ export default function App() {
         <Route path="/profile" element={<Profile />} />
         <Route path="/medications" element={<Medications />} />
         <Route path="/appointments" element={<Appointments />} />
+        <Route path="/care-connections" element={<CareConnections />} />
       </Route>
 
       <Route path="*" element={<Navigate to="/" replace />} />
