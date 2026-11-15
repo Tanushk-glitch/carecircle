@@ -9,6 +9,7 @@ import ProtectedRoute from './components/ProtectedRoute'
 import Medications from './pages/Medications'
 import Appointments from './pages/Appointments'
 import CareConnections from './pages/CareConnection'
+import WellbeingCheckin from './pages/WellbeingCheckin'
 
 export default function App() {
   return (
@@ -16,8 +17,9 @@ export default function App() {
       <Route path="/" element={<LandingPage />} />
       <Route path="/signup" element={<Signup />} />
       <Route path="/login" element={<Login />} />
-
       <Route element={<ProtectedRoute />}>
+        <Route path="/wellbeing" element={<WellbeingCheckin />} />
+
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/medications" element={<Medications />} />
