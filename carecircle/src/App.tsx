@@ -6,6 +6,7 @@ import Login from './pages/Login'
 import Dashboard from './pages/Dashboard'
 import ProtectedRoute from './components/ProtectedRoute'
 import Medications from './pages/Medications'
+import Appointments from './pages/Appointments'
 export default function App() {
   return (
     <Routes>
@@ -16,6 +17,7 @@ export default function App() {
     <Route element={<ProtectedRoute />}>
   <Route path="/dashboard" element={<Dashboard />} />
   <Route path="/medications" element={<Medications />} />
+  <Route path="/appointments" element={<Appointments />} />
 </Route>
 
       <Route path="*" element={<Navigate to="/" replace />} />

@@ -46,13 +46,23 @@ export default function Dashboard() {
         <p className="mt-2 text-slate-600">
           Your CareCircle dashboard is ready.
         </p>
-<Link
-  to="/medications"
-  className="mt-5 inline-flex items-center gap-2 rounded-xl bg-teal-600 px-5 py-3 font-semibold text-white hover:bg-teal-700"
->
-  <Pill size={19} />
-  Manage medications
-</Link>
+<div className="mt-5 flex flex-wrap gap-3">
+  <Link
+    to="/medications"
+    className="inline-flex items-center gap-2 rounded-xl bg-teal-600 px-5 py-3 font-semibold text-white hover:bg-teal-700"
+  >
+    <Pill size={19} />
+    Manage medications
+  </Link>
+
+  <Link
+    to="/appointments"
+    className="inline-flex items-center gap-2 rounded-xl bg-teal-600 px-5 py-3 font-semibold text-white hover:bg-teal-700"
+  >
+    <CalendarDays size={19} />
+    Manage appointments
+  </Link>
+</div>
 
         <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {[
