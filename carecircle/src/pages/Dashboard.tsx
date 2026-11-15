@@ -8,6 +8,7 @@ import {
   Bell,
   UserRound,
   HeartHandshake,
+  ClipboardCheck,
 } from 'lucide-react'
 import { useAuth } from '../context/AuthContext'
 import { useEffect, useState } from 'react'
@@ -123,6 +124,7 @@ export default function Dashboard() {
           Your CareCircle dashboard is ready.
         </p>
 
+        {/* Navigation */}
         <div className="mt-5 flex flex-wrap gap-3">
           <Link
             to="/medications"
@@ -139,20 +141,30 @@ export default function Dashboard() {
             <CalendarDays size={19} />
             Manage appointments
           </Link>
+
           <Link
-  to="/profile"
-  className="inline-flex items-center gap-2 rounded-xl border border-teal-600 px-5 py-3 font-semibold text-teal-700 hover:bg-teal-50"
->
-  <UserRound size={19} />
-  My Profile
-  <Link
-  to="/care-connections"
-  className="inline-flex items-center gap-2 rounded-xl border border-teal-600 px-5 py-3 font-semibold text-teal-700 hover:bg-teal-50"
->
-  <HeartHandshake size={19} />
-  Care Connections
-</Link>
-</Link>
+            to="/profile"
+            className="inline-flex items-center gap-2 rounded-xl border border-teal-600 px-5 py-3 font-semibold text-teal-700 hover:bg-teal-50"
+          >
+            <UserRound size={19} />
+            My Profile
+          </Link>
+
+          <Link
+            to="/care-connections"
+            className="inline-flex items-center gap-2 rounded-xl border border-teal-600 px-5 py-3 font-semibold text-teal-700 hover:bg-teal-50"
+          >
+            <HeartHandshake size={19} />
+            Care Connections
+          </Link>
+
+          <Link
+            to="/wellbeing"
+            className="inline-flex items-center gap-2 rounded-xl bg-indigo-600 px-5 py-3 font-semibold text-white hover:bg-indigo-700"
+          >
+            <ClipboardCheck size={19} />
+            Daily Wellbeing
+          </Link>
         </div>
 
         {/* Care Alerts */}
@@ -233,6 +245,11 @@ export default function Dashboard() {
               icon: Bell,
               title: 'Care alerts',
               description: 'Stay updated on important reminders.',
+            },
+            {
+              icon: ClipboardCheck,
+              title: 'Daily Wellbeing',
+              description: 'Track daily mood, sleep and appetite.',
             },
           ].map(({ icon: Icon, title, description }) => (
             <div
