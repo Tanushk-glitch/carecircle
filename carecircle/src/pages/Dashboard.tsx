@@ -7,6 +7,7 @@ import {
   CalendarDays,
   Bell,
   UserRound,
+  HeartHandshake,
 } from 'lucide-react'
 import { useAuth } from '../context/AuthContext'
 import { useEffect, useState } from 'react'
@@ -144,6 +145,13 @@ export default function Dashboard() {
 >
   <UserRound size={19} />
   My Profile
+  <Link
+  to="/care-connections"
+  className="inline-flex items-center gap-2 rounded-xl border border-teal-600 px-5 py-3 font-semibold text-teal-700 hover:bg-teal-50"
+>
+  <HeartHandshake size={19} />
+  Care Connections
+</Link>
 </Link>
         </div>
 
