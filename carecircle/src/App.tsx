@@ -4,9 +4,11 @@ import LandingPage from './pages/LandingPage'
 import Signup from './pages/Signup'
 import Login from './pages/Login'
 import Dashboard from './pages/Dashboard'
+import Profile from './pages/Profile'
 import ProtectedRoute from './components/ProtectedRoute'
 import Medications from './pages/Medications'
 import Appointments from './pages/Appointments'
+
 export default function App() {
   return (
     <Routes>
@@ -14,11 +16,12 @@ export default function App() {
       <Route path="/signup" element={<Signup />} />
       <Route path="/login" element={<Login />} />
 
-    <Route element={<ProtectedRoute />}>
-  <Route path="/dashboard" element={<Dashboard />} />
-  <Route path="/medications" element={<Medications />} />
-  <Route path="/appointments" element={<Appointments />} />
-</Route>
+      <Route element={<ProtectedRoute />}>
+        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/profile" element={<Profile />} />
+        <Route path="/medications" element={<Medications />} />
+        <Route path="/appointments" element={<Appointments />} />
+      </Route>
 
       <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>

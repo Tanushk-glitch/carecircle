@@ -6,6 +6,7 @@ import {
   Pill,
   CalendarDays,
   Bell,
+  UserRound,
 } from 'lucide-react'
 import { useAuth } from '../context/AuthContext'
 import { useEffect, useState } from 'react'
@@ -137,6 +138,13 @@ export default function Dashboard() {
             <CalendarDays size={19} />
             Manage appointments
           </Link>
+          <Link
+  to="/profile"
+  className="inline-flex items-center gap-2 rounded-xl border border-teal-600 px-5 py-3 font-semibold text-teal-700 hover:bg-teal-50"
+>
+  <UserRound size={19} />
+  My Profile
+</Link>
         </div>
 
         {/* Care Alerts */}
